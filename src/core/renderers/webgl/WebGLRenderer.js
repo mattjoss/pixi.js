@@ -76,11 +76,12 @@ export default class WebGLRenderer extends SystemRenderer
          */
         this.type = RENDERER_TYPE.WEBGL;
 
-        this.handleContextLost = this.handleContextLost.bind(this);
-        this.handleContextRestored = this.handleContextRestored.bind(this);
+        // COMMENTED OUT TO WORK WITH WECHAT ENVIRONMENT
+        // this.handleContextLost = this.handleContextLost.bind(this);
+        // this.handleContextRestored = this.handleContextRestored.bind(this);
 
-        this.view.addEventListener('webglcontextlost', this.handleContextLost, false);
-        this.view.addEventListener('webglcontextrestored', this.handleContextRestored, false);
+        // this.view.addEventListener('webglcontextlost', this.handleContextLost, false);
+        // this.view.addEventListener('webglcontextrestored', this.handleContextRestored, false);
 
         /**
          * The options passed in to create a new webgl context.

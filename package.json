@@ -61,7 +61,7 @@
     "eventemitter3": "^2.0.0",
     "ismobilejs": "^0.5.1",
     "object-assign": "^4.0.1",
-    "pixi-gl-core": "^1.1.4",
+    "pixi-gl-core": "https://github.com/mattjoss/pixi-gl-core.git#WeChat",
     "remove-array-items": "^1.0.0",
     "resource-loader": "^2.2.3"
   },

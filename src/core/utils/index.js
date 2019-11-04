@@ -307,38 +307,41 @@ export function sayHello(type)
  */
 export function isWebGLSupported()
 {
-    const contextOptions = { stencil: true, failIfMajorPerformanceCaveat: true };
+    // ADDED FOR WECHAT ENVIROMENT
+    // Automatically return true because we know webgl is supported and  cannot create canvas element
+    return true;
+    // const contextOptions = { stencil: true, failIfMajorPerformanceCaveat: true };
 
-    try
-    {
-        if (!window.WebGLRenderingContext)
-        {
-            return false;
-        }
+    // try
+    // {
+    //     if (!window.WebGLRenderingContext)
+    //     {
+    //         return false;
+    //     }
 
-        const canvas = document.createElement('canvas');
-        let gl = canvas.getContext('webgl', contextOptions) || canvas.getContext('experimental-webgl', contextOptions);
+    //     const canvas = document.createElement('canvas');
+    //     let gl = canvas.getContext('webgl', contextOptions) || canvas.getContext('experimental-webgl', contextOptions);
 
-        const success = !!(gl && gl.getContextAttributes().stencil);
+    //     const success = !!(gl && gl.getContextAttributes().stencil);
 
-        if (gl)
-        {
-            const loseContext = gl.getExtension('WEBGL_lose_context');
+    //     if (gl)
+    //     {
+    //         const loseContext = gl.getExtension('WEBGL_lose_context');
 
-            if (loseContext)
-            {
-                loseContext.loseContext();
-            }
-        }
+    //         if (loseContext)
+    //         {
+    //             loseContext.loseContext();
+    //         }
+    //     }
 
-        gl = null;
+    //     gl = null;
 
-        return success;
-    }
-    catch (e)
-    {
-        return false;
-    }
+    //     return success;
+    // }
+    // catch (e)
+    // {
+    //     return false;
+    // }
 }
 
 /**
