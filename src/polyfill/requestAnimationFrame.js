@@ -1,5 +1,5 @@
-WECHAT
-The following lines were commented out for the WeChat environment
+// WECHAT
+// The following lines were commented out for the WeChat environment
 
 // References:
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
