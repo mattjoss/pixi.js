@@ -1,5 +1,6 @@
 import maxRecommendedTextures from './utils/maxRecommendedTextures';
 import canUploadSameBuffer from './utils/canUploadSameBuffer';
+import { window } from 'pixi-browser-polyfill';
 
 /**
  * User's customizable globals for overriding the default PIXI settings, such

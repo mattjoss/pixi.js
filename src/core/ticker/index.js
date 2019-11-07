@@ -1,4 +1,5 @@
 import Ticker from './Ticker';
+import { document } from 'pixi-browser-polyfill';
 
 /**
  * The shared ticker instance used by {@link PIXI.extras.AnimatedSprite}.

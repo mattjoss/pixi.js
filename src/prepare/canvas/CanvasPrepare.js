@@ -1,5 +1,6 @@
 import * as core from '../../core';
 import BasePrepare from '../BasePrepare';
+import { document } from 'pixi-browser-polyfill';
 
 const CANVAS_START_SIZE = 16;
 

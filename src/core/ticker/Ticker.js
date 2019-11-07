@@ -1,6 +1,9 @@
 import settings from '../settings';
 import { UPDATE_PRIORITY } from '../const';
 import TickerListener from './TickerListener';
+import { global } from 'pixi-browser-polyfill';
+
+const requestAnimationFrame = global.requestAnimationFrame;
 
 /**
  * A Ticker class that runs an update loop that other objects listen to.

@@ -63,7 +63,8 @@
     "object-assign": "^4.0.1",
     "pixi-gl-core": "https://github.com/mattjoss/pixi-gl-core.git#WeChat",
     "remove-array-items": "^1.0.0",
-    "resource-loader": "^2.2.3"
+    "resource-loader": "https://github.com/mattjoss/resource-loader.git#browser-polyfill",
+    "pixi-browser-polyfill": "https://github.com/mattjoss/pixi-browser-polyfill.git"
   },
   "devDependencies": {
     "@pixi/jsdoc-template": "^2.4.1",

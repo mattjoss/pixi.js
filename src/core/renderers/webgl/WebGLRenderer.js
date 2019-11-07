@@ -296,16 +296,23 @@ export default class WebGLRenderer extends SystemRenderer
      */
     render(displayObject, renderTexture, clear, transform, skipUpdateTransform)
     {
+        // console.log("Render a")
+
         // can be handy to know!
         this.renderingToScreen = !renderTexture;
 
+        // console.log("Render b")
+
         this.emit('prerender');
+
+        // console.log("Render c")
 
         // no point rendering if our context has been blown up!
         if (!this.gl || this.gl.isContextLost())
         {
             return;
         }
+        // console.log("Render d")
 
         this._nextTextureLocation = 0;
 
@@ -314,36 +321,63 @@ export default class WebGLRenderer extends SystemRenderer
             this._lastObjectRendered = displayObject;
         }
 
+        // console.log("Render e")
+
         if (!skipUpdateTransform)
         {
             // update the scene graph
             const cacheParent = displayObject.parent;
 
+            // console.log("Render f")
+
             displayObject.parent = this._tempDisplayObjectParent;
+            // console.log("Render g")
+
             displayObject.updateTransform();
+            // console.log("Render h")
+
             displayObject.parent = cacheParent;
            // displayObject.hitArea = //TODO add a temp hit area
         }
 
+        // console.log("Render i")
+
         this.bindRenderTexture(renderTexture, transform);
 
+        // console.log("Render j")
+
         this.currentRenderer.start();
+
+        // console.log("Render k")
 
         if (clear !== undefined ? clear : this.clearBeforeRender)
         {
             this._activeRenderTarget.clear();
         }
 
+        // console.log("Render l")
+
         displayObject.renderWebGL(this);
+
+        // console.log("Render m")
 
         // apply transform..
         this.currentRenderer.flush();
+        // console.log("Render n")
 
         // this.setObjectRenderer(this.emptyRenderer);
 
         this.textureGC.update();
 
+        // console.log("Render o")
+
         this.emit('postrender');
+        // console.log("Render p")
+
+        if (this.hackRenderCallback) {
+            this.hackRenderCallback()
+        }
+
     }
 
     /**

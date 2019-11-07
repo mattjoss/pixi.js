@@ -1,3 +1,5 @@
+import { document } from 'pixi-browser-polyfill';
+
 /**
  * Creates a little colored canvas
  *

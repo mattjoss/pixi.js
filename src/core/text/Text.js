@@ -8,6 +8,7 @@ import settings from '../settings';
 import TextStyle from './TextStyle';
 import TextMetrics from './TextMetrics';
 import trimCanvas from '../utils/trimCanvas';
+import { navigator, document } from 'pixi-browser-polyfill';
 
 const defaultDestroyOptions = {
     texture: true,

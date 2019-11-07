@@ -5,6 +5,7 @@ import EventEmitter from 'eventemitter3';
 import { Rectangle, Point } from '../math';
 import { TextureCache, getResolutionOfUrl } from '../utils';
 import settings from '../settings';
+import { document } from 'pixi-browser-polyfill';
 
 /**
  * A texture stores the information that represents an image or part of an image. It cannot be added

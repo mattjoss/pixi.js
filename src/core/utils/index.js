@@ -7,6 +7,7 @@ import * as isMobile from 'ismobilejs';
 import removeItems from 'remove-array-items';
 import mapPremultipliedBlendModes from './mapPremultipliedBlendModes';
 import earcut from 'earcut';
+import { navigator, window, document } from 'pixi-browser-polyfill';
 
 let nextUid = 0;
 let saidHello = false;

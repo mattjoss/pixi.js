@@ -1,6 +1,7 @@
 import * as core from '../core';
 import Device from 'ismobilejs';
 import accessibleTarget from './accessibleTarget';
+import { window, navigator, document } from 'pixi-browser-polyfill';
 
 // add some extra variables to the container..
 core.utils.mixins.delayMixin(

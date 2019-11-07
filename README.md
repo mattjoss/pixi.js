@@ -180,6 +180,12 @@ You can also use the short-form `-e`:
 npm run dist -- -e extras -e interaction -e filters
 ```
 
+For Inspire, we use 
+```sh
+npm run dist -- --exclude accessibility
+```
+
+
 ### How to generate the documentation ###
 
 The docs can be generated using npm:

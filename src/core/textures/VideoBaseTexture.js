@@ -3,6 +3,7 @@ import { uid, BaseTextureCache } from '../utils';
 import { shared } from '../ticker';
 import { UPDATE_PRIORITY } from '../const';
 import determineCrossOrigin from '../utils/determineCrossOrigin';
+import { document } from 'pixi-browser-polyfill';
 
 /**
  * A texture of a [playing] Video.

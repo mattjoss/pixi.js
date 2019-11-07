@@ -1,4 +1,5 @@
 import settings from '../../../settings';
+import { document } from 'pixi-browser-polyfill';
 
 /**
  * Creates a Canvas element of the given size.

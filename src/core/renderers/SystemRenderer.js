@@ -5,6 +5,7 @@ import settings from '../settings';
 import Container from '../display/Container';
 import RenderTexture from '../textures/RenderTexture';
 import EventEmitter from 'eventemitter3';
+import { document } from 'pixi-browser-polyfill';
 
 const tempMatrix = new Matrix();
 

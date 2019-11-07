@@ -6,6 +6,7 @@ import settings from '../settings';
 import EventEmitter from 'eventemitter3';
 import determineCrossOrigin from '../utils/determineCrossOrigin';
 import bitTwiddle from 'bit-twiddle';
+import { navigatorm, document } from 'pixi-browser-polyfill';
 
 /**
  * A texture stores the information that represents an image. All textures have a base texture.

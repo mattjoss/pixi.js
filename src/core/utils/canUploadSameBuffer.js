@@ -1,3 +1,5 @@
+import { navigator } from 'pixi-browser-polyfill';
+
 export default function canUploadSameBuffer()
 {
 	// Uploading the same buffer multiple times in a single frame can cause perf issues.

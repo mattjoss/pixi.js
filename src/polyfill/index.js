@@ -2,6 +2,7 @@ import './Object.assign';
 import './requestAnimationFrame';
 import './Math.sign';
 import './Number.isInteger';
+import { window } from 'pixi-browser-polyfill';
 
 if (!window.ArrayBuffer)
 {

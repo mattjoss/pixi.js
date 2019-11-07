@@ -1,4 +1,5 @@
 import _url from 'url';
+import { document } from 'pixi-browser-polyfill';
 
 let tempAnchor;
 

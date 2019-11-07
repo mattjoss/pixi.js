@@ -171,6 +171,13 @@ export default class SpriteRenderer extends ObjectRenderer
      */
     render(sprite)
     {
+        // console.log('Render sprite')
+        // console.log(sprite)
+
+        if (!sprite._texture) {      
+            console.log('bad sprite!')      
+            throw 'bad sprite'
+        }
         // TODO set blend modes..
         // check texture..
         if (this.currentIndex >= this.size)
@@ -209,7 +216,7 @@ export default class SpriteRenderer extends ObjectRenderer
         const log2 = bitTwiddle.log2(np2);
         const buffer = this.buffers[log2];
 
-        const sprites = this.sprites;
+        const sprites = this.sprites.filter( (item) => item !== null);
         const groups = this.groups;
 
         const float32View = buffer.float32View;
@@ -227,8 +234,18 @@ export default class SpriteRenderer extends ObjectRenderer
         let currentGroup = groups[0];
         let vertexData;
         let uvs;
+
+        if (!sprites[0] || !sprites[0]._texture) {
+            console.log("####### No sprites!")
+            console.log(this)
+        }
+
+        // console.log('flush')
+        // console.log(this)
+        const fistSprite = sprites[0]
+
         let blendMode = premultiplyBlendMode[
-            sprites[0]._texture.baseTexture.premultipliedAlpha ? 1 : 0][sprites[0].blendMode];
+            fistSprite._texture.baseTexture.premultipliedAlpha ? 1 : 0][sprites[0].blendMode];
 
         currentGroup.textureCount = 0;
         currentGroup.start = 0;

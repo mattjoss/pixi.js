@@ -5,6 +5,7 @@ import mapCanvasBlendModesToPixi from './utils/mapCanvasBlendModesToPixi';
 import { pluginTarget } from '../../utils';
 import { RENDERER_TYPE, SCALE_MODES, BLEND_MODES } from '../../const';
 import settings from '../../settings';
+import { navigator } from 'pixi-browser-polyfill';
 
 /**
  * The CanvasRenderer draws the scene and all its content onto a 2d canvas. This renderer should

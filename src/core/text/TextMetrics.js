@@ -1,3 +1,6 @@
+import { document } from 'pixi-browser-polyfill';
+
+
 /**
  * The TextMetrics object represents the measurement of a block of text with a specified style.
  *

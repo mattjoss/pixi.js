@@ -1,5 +1,6 @@
 import { hex2rgb, rgb2hex } from '../../utils';
 import canUseNewCanvasBlendModes from '../../renderers/canvas/utils/canUseNewCanvasBlendModes';
+import { document } from 'pixi-browser-polyfill';
 
 /**
  * Utility methods for Sprite/Texture tinting.

@@ -1,4 +1,5 @@
 import glCore from 'pixi-gl-core';
+import { document } from 'pixi-browser-polyfill';
 
 const fragTemplate = [
     'precision mediump float;',
