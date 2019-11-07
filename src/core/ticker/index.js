@@ -1,6 +1,6 @@
 import Ticker from './Ticker';
-import { document } from 'pixi-browser-polyfill';
-
+import { document, global } from 'pixi-browser-polyfill';
+const performance = global.performance;
 /**
  * The shared ticker instance used by {@link PIXI.extras.AnimatedSprite}.
  * and by {@link PIXI.interaction.InteractionManager}.

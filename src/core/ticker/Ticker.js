@@ -4,6 +4,7 @@ import TickerListener from './TickerListener';
 import { global } from 'pixi-browser-polyfill';
 
 const requestAnimationFrame = global.requestAnimationFrame;
+const performance = global.performance;
 
 /**
  * A Ticker class that runs an update loop that other objects listen to.

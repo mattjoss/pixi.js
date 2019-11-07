@@ -2,6 +2,8 @@ import extractUniformsFromSrc from './extractUniformsFromSrc';
 import { uid } from '../../../utils';
 import { BLEND_MODES } from '../../../const';
 import settings from '../../../settings';
+import { global } from 'pixi-browser-polyfill';
+const performance = global.performance;
 
 const SOURCE_KEY_MAP = {};
 
